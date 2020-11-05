@@ -17,7 +17,6 @@ const data = {
   ],
   products: [
     {
-      _id: '1',
       name: 'Nike Slim Shirt',
       category: 'Shirts',
       image: 'https://res.cloudinary.com/dy14mattw/image/upload/v1604514574/amazon/p1_fpxgy1.jpg',
@@ -29,7 +28,6 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id: '2',
       name: 'Adidas Fit Shirt',
       category: 'Shirts',
       image: 'https://res.cloudinary.com/dy14mattw/image/upload/v1604514574/amazon/p2_d0tmdm.jpg',
@@ -41,7 +39,6 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id: '3',
       name: 'Lacoste Free Shirt',
       category: 'Shirts',
       image: 'https://res.cloudinary.com/dy14mattw/image/upload/v1604514574/amazon/p3_ltiwyx.jpg',
@@ -53,7 +50,6 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id: '4',
       name: 'Nike Slim Pant',
       category: 'Pants',
       image: 'https://res.cloudinary.com/dy14mattw/image/upload/v1604514574/amazon/p4_icev9s.jpg',
@@ -65,7 +61,6 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id: '5',
       name: 'Puma Slim Pant',
       category: 'Pants',
       image: 'https://res.cloudinary.com/dy14mattw/image/upload/v1604514573/amazon/p5_vxmwrc.jpg',
@@ -77,7 +72,6 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id: '6',
       name: 'Adidas Fit Pant',
       category: 'Pants',
       image: 'https://res.cloudinary.com/dy14mattw/image/upload/v1604514574/amazon/p6_smk630.jpg',
