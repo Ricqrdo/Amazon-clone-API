@@ -17,7 +17,7 @@ router.post('/signin', expressAsynCHandler(async (req, res) => {
     if(bcrypt.compareSync(password, user.password)){
       res.send({
         _id: user._id,
-        username: user.username,
+        name: user.name,
         email: user.email,
         isAdmin: user.isAdmin,
         token: generateToken(user)
