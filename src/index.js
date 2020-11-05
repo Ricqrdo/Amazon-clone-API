@@ -5,6 +5,9 @@ const cors = require("cors");
 const data = require('../data')
 require("dotenv").config();
 
+// router
+const UserRouter = require('./routes/User.routes')
+
 // config
 app.set("port", process.env.PORT || 4000);
 
@@ -14,11 +17,11 @@ app.use(express.json());
 app.use(cors());
 
 // Routes
-app.get("/", (req, res) => {
+app.get("/", (_req, res) => {
   res.send('hi')
 });
 
-app.get('/api/products', (req, res) => {
+app.get('/api/products', (_req, res) => {
   res.json(data.products)
 })
 
@@ -31,14 +34,20 @@ app.get('/api/products/:id', (req, res) => {
   }
 })
 
-// DB connection
-// mongoose.connect(
-//   process.env.DB_CONNECTION,
-//   { useUnifiedTopology: true, useNewUrlParser: true },
-//   () => console.log("connected to DB")
-// );
+app.use('/api/users', UserRouter)
+
+app.use((err, req, res, next) => {
+  res.status(500).send({message: err.message})
+})
 
 // server run
 app.listen(app.get("port"), ()=>{
   console.log('running api')
 });
+
+// DB connection
+mongoose.connect(
+  process.env.DB_CONNECTION,
+  { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true },
+  () => console.log("connected to DB")
+);
